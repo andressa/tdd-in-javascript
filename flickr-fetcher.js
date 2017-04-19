@@ -12,6 +12,12 @@ var FlickrFetcher = {
       '_b.jpg'
     ].join('');
     return url;
+  },
+  transformPhotoObj: function(photoObj) {
+    return {
+      title: photoObj.title,
+      url: this.photoObjToUrl(photoObj)
+    }
   }
 };
 
